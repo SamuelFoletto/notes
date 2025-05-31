@@ -19,6 +19,14 @@ class AuthController extends Controller
     public function loginSubmit(Request $request)
     {
 
-        return redirect()->route('home');
+        $request->validate([
+            'text_username' => 'required',
+            'text_password' => 'required',
+        ]);
+
+        $username = $request->input('text_username');
+        $password = $request->input('text_password');
+
+        echo 'ok';
     }
 }
