@@ -37,6 +37,18 @@
                                 <div class="mb-3">
                                     <button type="submit" class="btn btn-secondary w-100">LOGIN</button>
                                 </div>
+
+                                @if(session('LoginError'))
+                                    <div class="alert alert-danger">
+                                        {{ session('LoginError') }}
+                                    </div>
+                                @endif
+
+                                @if(session('logout'))
+                                    <div class="alert alert-success">
+                                        {{ session('logout') }}
+                                    </div>
+                                @endif
                             </form>
 
                         </div>
