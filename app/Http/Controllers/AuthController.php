@@ -60,6 +60,6 @@ class AuthController extends Controller
             ]
             ]);
 
-        echo 'Logado!';
+        return redirect()->to('/');
     }
 }
