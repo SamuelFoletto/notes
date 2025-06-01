@@ -12,6 +12,11 @@
 
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
+                            @if(session('WithoutLogin'))
+                                <div class="alert alert-warning">
+                                    {{ session('WithoutLogin') }}
+                                </div>
+                            @endif
                             <form action="/loginSubmit" method="post" novalidate>
                                 @csrf
                                 <div class="mb-3">
